@@ -1,0 +1,15 @@
+{
+  "name": "governance-framework-generator",
+  "version": "1.0.0",
+  "description": "AI governance framework generator for Australian businesses — MCP server",
+  "keywords": [
+    "mcp",
+    "ai-governance",
+    "australia",
+    "compliance"
+  ],
+  "homepage": "https://aiframework.com.au",
+  "author": "Kentron",
+  "license": "UNLICENSED",
+  "private": true
+}
