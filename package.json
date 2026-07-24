@@ -4,9 +4,18 @@
   "description": "AI governance framework generator for Australian businesses — MCP server",
   "keywords": [
     "mcp",
+    "mcp-server",
     "ai-governance",
+    "ai6",
+    "voluntary-ai-safety-standard",
     "australia",
-    "compliance"
+    "australian-business",
+    "compliance",
+    "risk-management",
+    "ai-policy",
+    "ai-business-policy",
+    "governance-framework",
+    "responsible-ai"
   ],
   "homepage": "https://aiframework.com.au",
   "author": "Kentron",
