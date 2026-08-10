@@ -1,24 +1,32 @@
 {
-  "identifier": "wbm001-governance-framework-generator",
-  "name": "AI Governance Framework Generator",
-  "version": "1.0.0",
-  "description": "Generates tailored AI governance frameworks for Australian businesses, aligned with the six AI6 practices in Australia's Voluntary AI Safety Standard (NAIC Guidance for AI Adoption). Profiles an organisation by industry, size and AI usage, then returns a structured, informational framework preview covering Accountability and Impact Assessment, with a link to the full six-practice framework. A structured starting point for Australian organisations shaping their AI policy and governance approach. Presents frameworks, not advice.",
+  "identifier": "kentron-au-australian-ai-governance-framework",
+  "name": "Australian AI Governance Framework",
+  "version": "1.1.0",
+  "description": "Australian AI governance framework, built around the legislation a specific organisation's use of AI actually triggers. Profiles an organisation by industry, size, turnover, state, AI use cases and data types, then identifies the Commonwealth and state instruments that apply to that profile — the Privacy Act 1988 and its Notifiable Data Breaches scheme, the automated decision-making disclosure required in privacy policies from 10 December 2026 under APP 1.7, and sector-specific regimes such as the Heavy Vehicle National Law, the Fair Work Act 2009 or the Security of Critical Infrastructure Act 2018. Structured around the six essential practices (AI6) in the National AI Centre's Guidance for AI Adoption, October 2025. The free preview covers the first two practices; the complete six-practice framework is a one-time $88 AUD including GST purchase at aiframework.com.au. Informational only — presents a framework, not advice.",
   "author": "Kentron",
-  "authorUrl": "https://github.com/wbm001",
+  "authorUrl": "https://github.com/kentron-au",
   "homepage": "https://aiframework.com.au",
   "category": "business-services",
   "tags": [
     "ai-governance",
-    "compliance",
     "australia",
-    "business-tools",
+    "privacy-act",
+    "app-1-7",
+    "compliance",
+    "ai-safety",
+    "governance-framework",
+    "automated-decision-making",
+    "naic",
+    "ai6",
+    "regulatory",
     "risk-management",
-    "ai-policy"
+    "ai-policy",
+    "voluntary-ai-safety-standard"
   ],
   "tools": [
     {
-      "name": "start_session",
-      "description": "Begin generating an AI governance framework for an Australian business.",
+      "name": "start_australian_ai_governance_framework",
+      "description": "Identifies the Australian legislation that applies to a specific organisation's use of AI, and builds a governance framework around it. Covers the Privacy Act 1988 including the automated decision-making disclosure required in privacy policies from 10 December 2026 under APP 1.7, plus the sector-specific Commonwealth and state instruments triggered by that organisation's industry, size, turnover, AI use cases and data types. Returns a session ID and the profiling questionnaire. Informational only — presents a framework, not advice.",
       "inputSchema": {
         "type": "object",
         "properties": {},
@@ -26,43 +34,54 @@
       }
     },
     {
-      "name": "submit_answers",
-      "description": "Submit the completed organisation profile for an AI governance framework session.",
+      "name": "submit_ai_governance_profile",
+      "description": "Submits the organisation profile and contact details for an Australian AI governance framework. The profile determines which legislation the framework identifies, so the answers should reflect the organisation's actual circumstances — turnover in particular, since the Privacy Act's small business threshold sits at $3 million and several categories are caught regardless of turnover. Returns a status of profile_saved; call get_ai_governance_framework next.",
       "inputSchema": {
         "type": "object",
         "properties": {
-          "session_id": { "type": "string" },
-          "contact": {
-            "type": "object",
-            "properties": {
-              "name": { "type": "string" },
-              "email": { "type": "string" },
-              "organisation": { "type": "string" }
-            }
+          "session_id": {
+            "type": "string",
+            "description": "From start_australian_ai_governance_framework"
           },
           "answers": {
             "type": "object",
+            "description": "Keys are question ids returned by start_australian_ai_governance_framework; values are the selected option (string) or options (array)",
+            "additionalProperties": true
+          },
+          "contact": {
+            "type": "object",
             "properties": {
-              "industry": { "type": "string" },
-              "orgSize": { "type": "string" },
-              "aiUseCases": { "type": "string" },
-              "dataTypes": { "type": "string" }
-            },
-            "required": ["industry", "orgSize", "aiUseCases", "dataTypes"]
+              "name": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "organisation": {
+                "type": "string"
+              }
+            }
           }
         },
-        "required": ["session_id", "answers"]
+        "required": [
+          "session_id",
+          "answers"
+        ]
       }
     },
     {
-      "name": "get_framework",
-      "description": "Returns the free preview of a tailored AI governance framework, covering the first two of six AI6 practices (Accountability and Impact Assessment). Full six-practice framework available at aiframework.com.au.",
+      "name": "get_ai_governance_framework",
+      "description": "Returns the framework. The free preview covers the first two of the six AI6 practices in the National AI Centre's Guidance for AI Adoption — Accountability and Impact Assessment — together with the legislative mapping for the profile supplied. The result includes a view_url for reading the document in a browser and a purchase_url that opens the website checkout with the profile already loaded. The complete six-practice framework is a one-time $88 AUD including GST purchase at aiframework.com.au; there is no payment through this endpoint. Both links expire two hours after the profile was created. Informational only — presents a framework, not advice or compliance guidance.",
       "inputSchema": {
         "type": "object",
         "properties": {
-          "session_id": { "type": "string" }
+          "session_id": {
+            "type": "string"
+          }
         },
-        "required": ["session_id"]
+        "required": [
+          "session_id"
+        ]
       }
     }
   ]
