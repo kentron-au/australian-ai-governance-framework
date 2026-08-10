@@ -1,16 +1,22 @@
 {
-  "name": "governance-framework-generator",
-  "version": "1.0.0",
-  "description": "AI governance framework generator for Australian businesses — MCP server",
+  "name": "australian-ai-governance-framework",
+  "version": "1.1.0",
+  "description": "Australian AI governance framework mapped to the Privacy Act and sector laws your AI use triggers — MCP server metadata",
   "keywords": [
     "mcp",
     "mcp-server",
     "ai-governance",
     "ai6",
+    "naic",
     "voluntary-ai-safety-standard",
+    "privacy-act",
+    "app-1-7",
+    "automated-decision-making",
+    "notifiable-data-breaches",
     "australia",
     "australian-business",
     "compliance",
+    "regulatory",
     "risk-management",
     "ai-policy",
     "ai-business-policy",
@@ -18,6 +24,10 @@
     "responsible-ai"
   ],
   "homepage": "https://aiframework.com.au",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kentron-au/australian-ai-governance-framework"
+  },
   "author": "Kentron",
   "license": "UNLICENSED",
   "private": true
