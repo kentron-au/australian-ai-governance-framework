@@ -97,7 +97,8 @@ The document arrives in the structuredContent field `framework_markdown`, and in
 | | Free preview | Full framework |
 |---|---|---|
 | Price | Nothing | **$88 AUD including GST**, one-time |
-| Legislative mapping | Complete, for the profile supplied | Complete, for the profile supplied |
+| Legislative mapping — Commonwealth | Complete, for the profile supplied | Complete, for the profile supplied |
+| Legislative mapping — state and territory | Up to two instruments | Up to ten instruments |
 | Practice 1 — Accountability (Decide who is accountable) | Included | Included |
 | Practice 2 — Impact Assessment (Understand impacts and plan accordingly) | Included | Included |
 | Practice 3 — Risk Management (Measure and manage risks) | — | Included |
@@ -107,7 +108,9 @@ The document arrives in the structuredContent field `framework_markdown`, and in
 
 The name before each bracket is the heading used in the document; the name inside is the National AI Centre's own wording for the same practice.
 
-The legislative mapping is not held back — it is in the free preview in full, because it is the part that tells an organisation whether the rest is worth $88.
+The Commonwealth mapping is not held back — it is in the free preview in full, because it is the part that tells an organisation whether the rest is worth $88. The state and territory layer is where the two differ: the preview carries up to two instruments, the purchased framework up to ten.
+
+The preview page is read-only. Printing and saving are part of the purchased framework, which also extends the link from two hours to 18 months.
 
 **There is no payment through this endpoint.** The `purchase_url` reopens the preview with the profile already restored, alongside the purchase option, so the questionnaire is not answered a second time. Payment is by Stripe from there. Card details are never handled by aiframework.com.au.
 
