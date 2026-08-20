@@ -97,8 +97,8 @@ The document arrives in the structuredContent field `framework_markdown`, and in
 | | Free preview | Full framework |
 |---|---|---|
 | Price | Nothing | **$88 AUD including GST**, one-time |
-| Legislative mapping — *Applies* | Complete, for the profile supplied | Complete, for the profile supplied |
-| Legislative mapping — *May apply* and *Turns on your own status* | Part | Complete |
+| Legislative mapping — *Applies*, and *Applicability turns on your own status* | Complete, for the profile supplied | Complete, for the profile supplied |
+| Legislative mapping — *May apply depending on facts you hold* | Part | Complete |
 | Practice 1 — Accountability (Decide who is accountable) | Included | Included |
 | Practice 2 — Impact Assessment (Understand impacts and plan accordingly) | Included | Included |
 | Practice 3 — Risk Management (Measure and manage risks) | — | Included |
@@ -108,7 +108,7 @@ The document arrives in the structuredContent field `framework_markdown`, and in
 
 The name before each bracket is the heading used in the document; the name inside is the National AI Centre's own wording for the same practice.
 
-Instruments under **Applies** are never held back — they are in the free preview in full, Commonwealth and state alike. The conditional tiers differ: instruments under **May apply depending on facts you hold** and **Applicability turns on your own status** are capped in the preview and complete in the purchased framework. The preview states the count, so you know how many are not shown.
+Instruments under **Applies**, and under **Applicability turns on your own status**, are never held back — both print in full in the free preview, Commonwealth and state alike. One tier is capped: **May apply depending on facts you hold**. Commonwealth and state instruments in that tier each have their own limit, and both limits are higher in the purchased framework. The preview states the count, so you know how many are not shown.
 
 The preview page is read-only. Printing and saving are part of the purchased framework, which also extends the link from two hours to 18 months.
 
