@@ -16,6 +16,8 @@ Profiles an organisation by industry, size, turnover, states of operation, AI us
 
 The mapping is tiered rather than a flat list. Instruments return under **Applies**, **May apply depending on facts you hold**, or **Applicability turns on your own status** — because the questionnaire captures a profile, not an organisation's full circumstances, and several thresholds turn on facts it does not ask for. The Privacy Act small business exemption is the clearest case: at $3 million turnover or less, whether the Act applies depends on which of the ss 6D and 6E categories the organisation falls into.
 
+A tier with nothing in it is left out, so a given document may carry two of these headings rather than three.
+
 Around that mapping the framework is structured on the six essential practices (AI6) in the National AI Centre's **Guidance for AI Adoption**, October 2025: Accountability, Impact Assessment, Risk Management, Transparency & Information Sharing, Testing & Monitoring, and Human Oversight.
 
 The legislative mapping is specific to the profile supplied. It is not something a general answer reliably produces for an Australian organisation.
@@ -54,7 +56,7 @@ This is a remote, hosted MCP server. No local installation is required.
 
 **Any other MCP client** — point it at the endpoint over Streamable HTTP and leave authentication unset.
 
-If you have connected before and the tool names look wrong, remove the connector and add it again. Tool lists cache client-side, and the tools were renamed in August 2026.
+If you have connected before and the tool names or the questionnaire's options look wrong, remove the connector and add it again. Tool lists cache client-side: the tools were renamed in August 2026, and the questionnaire's options change as the legislative register grows.
 
 ---
 
@@ -108,7 +110,7 @@ The document arrives in the structuredContent field `framework_markdown`, and in
 
 The name before each bracket is the heading used in the document; the name inside is the National AI Centre's own wording for the same practice.
 
-Instruments under **Applies**, and under **Applicability turns on your own status**, are never held back — both print in full in the free preview, Commonwealth and state alike. One tier is capped: **May apply depending on facts you hold**. Commonwealth and state instruments in that tier each have their own limit, and both limits are higher in the purchased framework. The preview states the count, so you know how many are not shown.
+Instruments under **Applies**, and under **Applicability turns on your own status**, are never held back — both print in full in the free preview, Commonwealth and state alike. One tier is capped: **May apply depending on facts you hold**. Commonwealth and state instruments in that tier each have their own limit, and both limits are higher in the purchased framework. Where instruments are held back, the preview says so; where a profile matches fewer than the limit, nothing is capped and no such note appears.
 
 The preview page is read-only. Printing and saving are part of the purchased framework, which also extends the link from two hours to 18 months.
 
@@ -164,7 +166,7 @@ Full detail, including overseas disclosure and the Notifiable Data Breaches posi
 | "Session not found" | Free preview sessions are removed two hours after creation. Call `start_australian_ai_governance_framework` to begin again. Purchased frameworks are not affected and remain available for 18 months |
 | A validation error on `submit_ai_governance_profile` | An option string does not match, or the email address is invalid. Pass the questionnaire's own strings through unaltered — `jurisdiction` takes full state names |
 | The framework does not reflect the profile submitted | Call `submit_ai_governance_profile` again on the same session to correct the answers, then `get_ai_governance_framework`. If it still does not match, get in touch — it will be regenerated or refunded |
-| Tool names not recognised, or old names appear | The tools were renamed in August 2026 and client tool lists cache. Remove the connector and add it again |
+| Tool names not recognised, old names appear, or an option the questionnaire returned is rejected as invalid | Client tool lists cache. The tools were renamed in August 2026, and the questionnaire's options change as the register grows, so a cached schema can reject a current option. Remove the connector and add it again |
 | A request is throttled | The endpoint rate-limits by IP. Wait and retry, or get in touch |
 | An instrument you expected is missing | The mapping returns legislative instruments. Regulator guidance and standards are out of scope, and coverage reflects the position at the date of generation |
 
